@@ -1,38 +1,331 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.홈페이지 {
+  background-color: black;
+  min-height:100vh; 
+ 
+  color: white;
+  padding-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.홈페이지-로딩스피너 {
+  padding-top: 30vh;
+}
+
+.내브바-버튼 {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.배너 {
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.배너::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  content: "";
+  background: linear-gradient(to right, black, transparent);
+}
+
+.배너-정보 {
+  width: 30%;
+  margin-left: 3%;
+  color: white;
+  z-index: 1;
+}
+
+.배너-정보 h1 {
+  font-weight: bold;
+}
+
+.캐러셀 {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.카드 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 355px;
+}
+
+.추천카드:hover{
+  .오버레이{
+    opacity: 1;
+    transition: 0.5s;
+    background-color: black;
+  }
+
+}
+
+.오버레이 {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px
+}
+
+.캐러셀 .react-multi-carousel-item {
+  flex-grow: 1;
+}
+
+.캐러셀 .react-multi-carousel-item:hover {
+  .오버레이 {
+    opacity: 1;
+    transition: 0.5s;
+    background-color: black;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.카드-제목{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.카드-뱃지{
+  margin-right: 5px;
+}
+
+.카드-라인-뱃지{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.카드-이용가{
+  color: red;
+  font-weight: bold;
+}
+
+.영화디테일-전체{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+}
+
+.영화디테일-카드-뱃지{
+  margin-right: 10px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-width: 100px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.영화디테일-이미지{
+  padding-top: 150%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.영화디테일-백그라운드{
+  background-color: black;
+  color: white;
+  min-height: 95vh;
+}
+.영화디테일{
+  display: flex;
+}
+
+.영화디테일-제목{
+  margin:10px 0;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.영화디테일-태그라인{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.영화디테일-평가들{
+  margin-right: 20px;
+}
+
+.영화디테일-인기도{
+  font-weight: bold;
+}
+
+.영화디테일-설명{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+ 
+}
+
+.영화디테일-기타정보 div{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.기타정보뱃지{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.트레일러-버튼{
+  margin-top: 60px;
+  border: none;
+  background-color: black;
+  color: red;
+}
+
+.트레일러-버튼:hover{
+  border: none;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.유튜브{
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.리뷰버튼{
+  min-width: 150px;
+  height: 60px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.활성버튼{
+  border-color: #FE2E2E;
+  background-color: #FE2E2E;
+  color: white;
+}
+
+.리뷰박스{
+  border: 2px solid white;
+  padding: 40px;
+}
+
+.리뷰{
+  border-bottom: 1px solid #585858;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.리뷰작성자{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.추천영화{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.필터들{
+  padding-left: 20px;
+}
+
+.필터들 *{
+  margin-bottom: 5px;
+  color: white;
+}
+
+.필터버튼 button{
+  border-color: white;
+  background-color: black;
+}
+
+.필터버튼 .dropdown-menu{
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.연도-전체{
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.연도{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.필터-장르{
+  color: white;
+}
+
+.영화들{
+  padding-top: 20px;
+  display: flex;
+  background-color: black;
+  color: white;
+  min-height: 95vh;
+ 
+}
+
+.영화목록{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 450px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.영화목록-오버레이{
+  opacity: 0;
+  padding: 10px;
+  height: 100%;
+  color: white;
+  border-radius: 5px;
+}
+
+.영화목록:hover{
+  .영화목록-오버레이{
+    background-color: black;
+    opacity: 1;
+    transition: 0.5s;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.영화목록-설명{
+  margin: 20px 0px ;
+
+  font-size: 12px;
+}
+
+.영화목록-평가 span{
+  margin-right: 10px;
+}
+
+.페이지네이션{
+  display: flex;
+  justify-content: end;
+}
+
+.장르버튼{
+  display: flex;
+  flex-direction: column;
 }

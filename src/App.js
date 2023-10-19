@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homepage from './page/Homepage';
+import Movies from './page/Movies';
+import Moviesdetail from './page/Moviesdetail';
+import 내브바 from './component/Nav';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <내브바/>
+    <Routes>
+      <Route path='/' element={<Homepage/>}/>
+      <Route path='/영화' element={<Movies/>}/>
+      <Route path='/영화디테일' element={<Moviesdetail/>}/>
+    </Routes>
+    </BrowserRouter>
+      
+ 
   );
 }
 
